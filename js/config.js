@@ -1,4 +1,4 @@
 var config = {
   badgesEnabled: true,
-  apiBaseUrl: "http://localhost:3000/api",
+  apiBaseUrl: "https://sc-orinoco-backend.herokuapp.com/",
 };
