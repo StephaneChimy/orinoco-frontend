@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS + style.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Orinoco</title>
+</head>
+
+<body>
+
+    <header class="container-fluid">
+        <div class="row">
+            <img class="col img-fluid" src="./baniere.png" alt="Logo et titre">
+        </div>
+    </header>
+    <nav class="navbar navbar-light bg-light justify-content-around">
+        <a href="./index.html" class="nav-link btn btn-primary">accueil</a>
+        <a href="./basket.html" class="nav-link btn btn-primary">Panier <span class="badge badge-light"></span></a>
+
+    </nav>
+
+
+    <main class="row container-fluid justify-content-around mx-auto">
+        <!-- Start of Basket -->
+        <section id="showBasket" class="card col-lg-5 mx-auto">
+            <h1>
+                Panier
+            </h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Quantités</th>
+                        <th>Prix Unitaire</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <thead>
+                        <tr class="total">
+                            <th>Total</th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+
+                </tbody>
+
+            </table>
+        </section>
+        <!-- End of Basket -->
+        <!-- Start of Form -->
+        <section id="showForm" class=" card  col-lg-5 mx-auto">
+            <form class="row justify-content-around" id="formulaire">
+                <h2 class="col-12 text-center">
+                    Informations de commande
+
+                </h2>
+
+                <div class="form-group col-5">
+                    <label for="inputName">Nom</label>
+                    <input required type="text" class="form-control" id="lastName" placeholder="Entrez votre nom"
+                        pattern="^([\p{L}]+)([\p{L}\- ']*)$" title="Caractères de a à Z">
+
+                    <small id="nameHelp" class="form-text text-muted">ex: Dupont</small>
+                </div>
+                <div class="form-group col-7">
+                    <label for="inputSurname">Prénom</label>
+                    <input required type="text" class="form-control" id="firstName" placeholder="Entrez votre prénom"
+                        pattern="^([\p{L}]+)([\p{L}\- ']*)$" title="Caractères de a à Z">
+                    <small id="surnameHelp" class="form-text text-muted">ex: Jean-Claude</small>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="inputAddress">Adresse</label>
+                        <input required type="text" class="form-control" id="address"
+                            placeholder="Entrez votre adresse">
+                        <small id="addressHelp" class="form-text text-muted">ex: 12 rue charles Gounod</small>
+                    </div>
+                </div>
+
+                <div class="form-group col-8">
+                    <label for="inputCity">Ville</label>
+                    <input required type="text" class="form-control" id="city" placeholder="Entrez votre Ville"
+                        pattern="^([\p{L}]+)([\p{L}\- ']*)$" title="Caractères de a à Z">
+                    <small id="cityHelp" class="form-text text-muted">ex: Rueil-Malmaison</small>
+                </div>
+                <div class="form-group col-4">
+                    <label for="inputPostalCode">Code postale</label>
+                    <input type="number" class="form-control" id="postalCode" placeholder="Entrez votre Code postale">
+                    <small id="postalCodeHelp" class="form-text text-muted">ex: 92500</small>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="inputEmail">email</label>
+                        <input required type="email" class="form-control" id="email"
+                            placeholder="Entrez votre adresse email">
+                        <small id="postalCodeHelp" class="form-text text-muted">ex: dupont.jc@gmail.com</small>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" id="submit" class="btn btn-primary">Commandez</button>
+                </div>
+            </form>
+        </section>
+        <!-- End of Form -->
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+<script src="./js/config.js"></script>
+<script src="./js/api/api.service.js"></script>
+<script src="./js/api/product.service.js"></script>
+<script src="./js/api/order.service.js"></script>
+<script src="./js/fonctions.js"></script>
+<script src="./js/page.basket.js"></script>
+
+</html>

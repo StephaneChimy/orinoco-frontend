@@ -1,0 +1,22 @@
+header {
+  background-color: #f3e9f1;
+}
+
+header img {
+  max-height: 20vh;
+  object-fit: contain;
+}
+
+.card {
+  margin-bottom: 5px;
+}
+
+.card-text {
+  overflow: scroll;
+  max-height: 70px;
+}
+
+.card-img-top {
+  max-height: 20vh;
+  object-fit: contain;
+}
